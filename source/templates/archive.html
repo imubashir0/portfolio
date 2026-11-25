@@ -1,0 +1,42 @@
+<main id="main" class="archive-main">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Projects</span></nav>
+      <header class="page-intro">
+        <p class="eyebrow"><span class="kicker-line"></span>Case studies</p>
+        <h1>Project archive<span class="accent">.</span></h1>
+        <p>Explore my work in systems administration, infrastructure, networking, and hardware.</p>
+      </header>
+      <section class="archive-listing" aria-label="Project directory">
+        <div id="archive-tools" class="archive-tools" hidden>
+          <div class="search-and-filters">
+            <label class="search-field">$search_icon<span class="sr-only">Search projects</span><input id="project-search" type="search" placeholder="Search by project, skill, or tool" autocomplete="off"></label>
+            <button id="filter-toggle" class="button button-secondary" type="button" aria-expanded="false" aria-controls="filter-panel">$sliders_icon Filters <span id="filter-count" hidden></span></button>
+          </div>
+          <div class="category-list" role="group" aria-label="Project category">$category_buttons</div>
+          <div id="filter-panel" class="filter-panel" hidden>
+            <label>Platform <select id="platform-filter"><option value="">All platforms</option>$platform_options</select></label>
+            <label>Difficulty <select id="difficulty-filter"><option value="">All levels</option><option>Intermediate</option><option>Advanced</option></select></label>
+            <button class="plain-button reset-filters" type="button">Reset filters</button>
+          </div>
+        </div>
+        <div class="archive-summary">
+          <p id="result-count" role="status">$project_count projects</p>
+          <button id="compare-start" class="plain-button" type="button" aria-expanded="false" aria-controls="compare-panel" hidden>$compare_icon Compare projects</button>
+        </div>
+        <section id="compare-panel" class="compare-panel" aria-labelledby="compare-title" hidden>
+          <h2 id="compare-title">Compare projects</h2>
+          <p>Choose two projects to see their tools, scope, and outcomes side by side.</p>
+          <div class="compare-inputs">
+            <label>First project<select id="compare-a"><option value="">Choose a project</option>$compare_options</select></label>
+            <label>Second project<select id="compare-b"><option value="">Choose a project</option>$compare_options</select></label>
+          </div>
+          <div id="comparison" aria-live="polite"></div>
+        </section>
+        <div class="archive-rows">$archive_rows</div>
+        <div id="empty-state" class="empty-state" hidden>
+          $search_icon<h2>No matching projects</h2><p>Try a different term or clear the filters to see every case study.</p>
+          <button type="button" class="button button-secondary reset-filters">Clear filters</button>
+        </div>
+      </section>
+    </div>
+  </main>

@@ -1,0 +1,364 @@
+[
+  {
+    "slug": "active-directory-exchange",
+    "name": "Active Directory & Exchange",
+    "category": "Systems",
+    "discipline": "Identity & messaging",
+    "icon": "network",
+    "date": "Oct 2024 – Nov 2024",
+    "setting": "Academic lab",
+    "role": "Systems administrator",
+    "platforms": [
+      "Windows"
+    ],
+    "level": "Intermediate",
+    "tools": [
+      "AD DS",
+      "Exchange 2019",
+      "DNS",
+      "Group Policy"
+    ],
+    "cover": "directory",
+    "coverAlt": "Green Ethernet patch cables connected to a bank of network ports.",
+    "summary": "Built a Windows domain and verified that users could resolve names and send mail across the lab.",
+    "purpose": "A working mailbox depends on several services agreeing about a user and a host. I built an isolated Windows environment to follow that chain from the directory to mail delivery.",
+    "steps": [
+      [
+        "Build the directory",
+        "I created user accounts and organizational units in Active Directory Domain Services, then configured Group Policy for the lab."
+      ],
+      [
+        "Check name resolution",
+        "I set up DNS, validated the records, and troubleshot domain communication before moving on to Exchange."
+      ],
+      [
+        "Follow a message",
+        "I installed and configured Exchange Server 2019, set up POP and IMAP access, and checked mail flow end to end."
+      ]
+    ],
+    "resultLabel": "What I verified",
+    "result": "The lab domain resolved the required names and Exchange delivered test mail. Checking DNS separately gave me a way to narrow down a mail problem before changing Exchange settings.",
+    "takeaway": "Test the dependencies first. A mail-flow issue can start with an incorrect DNS record."
+  },
+  {
+    "slug": "custom-pc-builds",
+    "name": "Custom PC builds",
+    "category": "Hardware",
+    "discipline": "Hardware & deployment",
+    "icon": "cpu",
+    "date": "Apr 2026 – Present",
+    "setting": "Independent project",
+    "role": "PC builder & reseller",
+    "platforms": [
+      "Hardware"
+    ],
+    "level": null,
+    "tools": [
+      "PC assembly",
+      "Component selection",
+      "Troubleshooting",
+      "System testing"
+    ],
+    "cover": "hardware",
+    "coverAlt": "Copper light on a graphics card fan, heatsink fins, and the inside of a desktop PC.",
+    "summary": "Selected compatible parts, assembled complete desktops, and tested each system before resale.",
+    "purpose": "Building for someone else means taking responsibility for the whole machine. I carried custom desktop systems from the parts list through assembly, troubleshooting, testing, and sale.",
+    "steps": [
+      [
+        "Select compatible parts",
+        "I selected components for each build and checked that they would work together as a complete system."
+      ],
+      [
+        "Assemble and troubleshoot",
+        "I assembled each desktop and worked through hardware issues that came up during the build."
+      ],
+      [
+        "Test before handoff",
+        "I tested completed systems before offering them for resale."
+      ]
+    ],
+    "resultLabel": "What I delivered",
+    "result": "I sold completed, tested desktops that I had built myself. The project gave me practice making component decisions and troubleshooting the finished machine.",
+    "takeaway": "A parts list is only the start. The finished system is what the next owner has to rely on."
+  },
+  {
+    "slug": "virtualization-home-lab",
+    "name": "Virtualization home lab",
+    "category": "Infrastructure",
+    "discipline": "Virtualization & networking",
+    "icon": "layers",
+    "date": "Feb 2025 – Sep 2025",
+    "setting": "Home lab",
+    "role": "Lab designer & administrator",
+    "platforms": [
+      "Windows",
+      "Linux",
+      "Other"
+    ],
+    "level": "Advanced",
+    "tools": [
+      "VMware ESXi",
+      "Virtual machines",
+      "Firewall rules",
+      "Linux"
+    ],
+    "cover": "virtualization",
+    "coverAlt": "A stack of compact metal servers lit in cool blue.",
+    "summary": "Built an isolated ESXi environment for virtual machines, containers, and network testing.",
+    "purpose": "I wanted a place to test how servers and network policies behave without disturbing everyday systems. VMware ESXi gave me a separate environment for running those experiments.",
+    "steps": [
+      [
+        "Build the test environment",
+        "I set up VMware ESXi and provisioned virtual machines and container workloads for isolated testing."
+      ],
+      [
+        "Control traffic",
+        "I configured load balancing and firewall rules so I could test how traffic moved through the environment."
+      ],
+      [
+        "Inspect the logs",
+        "I reviewed firewall logs alongside the configured rules to see what traffic the lab actually allowed."
+      ]
+    ],
+    "resultLabel": "What I built",
+    "result": "The lab provided a repeatable environment for testing network changes and observing their effects in logs.",
+    "takeaway": "A firewall rule describes an intention. Its logs help show what actually happened."
+  },
+  {
+    "slug": "veeam-backup-design",
+    "name": "Veeam backup solution design",
+    "category": "Infrastructure",
+    "discipline": "Backup & recovery",
+    "icon": "database",
+    "date": "Sep 2025 – Dec 2025",
+    "setting": "Home lab design",
+    "role": "Backup solution designer",
+    "platforms": [
+      "Other"
+    ],
+    "level": null,
+    "tools": [
+      "Veeam",
+      "Proxmox",
+      "ZFS",
+      "Retention policies"
+    ],
+    "summary": "Designed a backup and recovery plan for a Proxmox lab, including storage, retention, and exclusions.",
+    "purpose": "A Proxmox home lab needed a plan for what to protect, how long to keep it, and how to recover it. I used those questions to define the backup design.",
+    "steps": [
+      [
+        "Define coverage",
+        "I outlined the recovery policies and identified exclusions as part of the backup scope."
+      ],
+      [
+        "Plan storage",
+        "I planned mirrored SSDs for boot storage and a ZFS storage target for backups."
+      ],
+      [
+        "Specify retention",
+        "I set out how backup copies should be retained and linked those choices to the lab’s recovery needs."
+      ]
+    ],
+    "resultLabel": "Design deliverable",
+    "result": "The design documented a proposed storage layout and policies for retention, exclusions, and recovery. My separate Veeam deployment lab covers the hands-on backup and restore work.",
+    "takeaway": "Writing down exclusions is part of a recovery plan. They show exactly what the plan covers.",
+    "related": "veeam-backup-lab"
+  },
+  {
+    "slug": "local-llm",
+    "name": "Local LLM deployment",
+    "category": "Systems",
+    "discipline": "Linux & local AI",
+    "icon": "terminal",
+    "date": "Apr 2024 – May 2025",
+    "setting": "Independent project",
+    "role": "Deployment & performance tuning",
+    "platforms": [
+      "Linux"
+    ],
+    "level": "Advanced",
+    "tools": [
+      "LLaMA",
+      "Falcon",
+      "Open WebUI",
+      "Linux"
+    ],
+    "summary": "Ran LLaMA and Falcon offline and tuned context size and resource allocation for local hardware.",
+    "purpose": "I wanted to run language models without sending prompts to an external service. The project was as much about fitting the workload to local hardware as it was about starting a model.",
+    "steps": [
+      [
+        "Deploy locally",
+        "I set up LLaMA and Falcon in an offline environment and used Open WebUI as a local interface."
+      ],
+      [
+        "Work within resource limits",
+        "I adjusted context size, resource allocation, and quantization settings to fit the available hardware."
+      ],
+      [
+        "Compare behaviour",
+        "I compared how the models responded as I varied those settings and the amount of context supplied."
+      ]
+    ],
+    "resultLabel": "What I ran",
+    "result": "Both model families ran locally. Tuning the configuration gave me practical experience with the trade-off between context length, memory use, and responsiveness.",
+    "takeaway": "The best context setting depends on both the prompt and the hardware available to serve it."
+  },
+  {
+    "slug": "loaner-laptop-refurbishment",
+    "name": "Loaner laptop refurbishment",
+    "category": "Hardware",
+    "discipline": "Endpoint deployment",
+    "icon": "laptop",
+    "date": "Jan 2026 – Mar 2026",
+    "setting": "Algonquin College",
+    "role": "IT support technician",
+    "platforms": [
+      "Windows",
+      "Hardware"
+    ],
+    "level": "Intermediate",
+    "tools": [
+      "Windows",
+      "SO-DIMM RAM",
+      "NVMe storage",
+      "System imaging"
+    ],
+    "summary": "Reclaimed compatible RAM and storage, installed Windows, and checked loaner laptops for deployment.",
+    "purpose": "Retired hardware could still serve students if the replacement parts were compatible and the finished laptops were dependable. I helped prepare loaner devices for end users at Algonquin College.",
+    "steps": [
+      [
+        "Match the parts",
+        "I selected compatible reclaimed SO-DIMM RAM and NVMe storage for the loaner laptops."
+      ],
+      [
+        "Restore the machines",
+        "I installed the hardware and a fresh copy of Windows to prepare each device for use."
+      ],
+      [
+        "Validate the finished device",
+        "I checked component compatibility, system health, and operation after both the upgrades and the Windows installation."
+      ]
+    ],
+    "resultLabel": "What I delivered",
+    "result": "The refurbished laptops were prepared and checked for end users. Reusing working components turned retired hardware into useful loaner equipment.",
+    "takeaway": "The repair is complete when the laptop works as a whole after imaging."
+  },
+  {
+    "slug": "kismet-wireless-sensor",
+    "name": "Kismet wireless sensor",
+    "category": "Networking",
+    "discipline": "Wireless monitoring",
+    "icon": "wifi",
+    "date": "Sep 2025 – Present",
+    "setting": "Wireless lab",
+    "role": "Sensor builder & analyst",
+    "platforms": [
+      "Linux"
+    ],
+    "level": "Advanced",
+    "tools": [
+      "Kismet",
+      "802.11",
+      "RF monitoring",
+      "Linux"
+    ],
+    "summary": "Used wireless telemetry to document access points, channels, signal behaviour, and client associations in a lab.",
+    "purpose": "A client’s connected status answers only one question about a wireless network. I built a lab sensor to see how channel use, signal behaviour, and associations fit together.",
+    "steps": [
+      [
+        "Set up the sensor",
+        "I configured a Kismet sensor for monitoring wireless activity in the lab."
+      ],
+      [
+        "Read the radio context",
+        "I examined access points, client associations, channels, and signal behaviour together."
+      ],
+      [
+        "Document the observations",
+        "I translated the captured telemetry into structured findings and investigation notes."
+      ]
+    ],
+    "resultLabel": "What I documented",
+    "result": "The sensor gave me a view of 802.11 activity that I could describe in technical reports, including how observations related to channel and signal context.",
+    "takeaway": "A device identifier alone gives an incomplete picture of what is happening on a channel."
+  },
+  {
+    "slug": "jellyfin-media-server",
+    "name": "Self-hosted Jellyfin server",
+    "category": "Systems",
+    "discipline": "Linux services",
+    "icon": "server",
+    "date": "Aug 2024",
+    "setting": "Independent project",
+    "role": "Service administrator",
+    "platforms": [
+      "Linux"
+    ],
+    "level": "Intermediate",
+    "tools": [
+      "Jellyfin",
+      "Apache",
+      "TLS",
+      "Linux"
+    ],
+    "summary": "Hosted a media service on a Linux VM, configured HTTPS through Apache, and wrote an administrator guide.",
+    "purpose": "I wanted to run a media service I could maintain myself, including the route users took to reach it and the information needed to administer it later.",
+    "steps": [
+      [
+        "Host the application",
+        "I installed Jellyfin on a Linux virtual machine."
+      ],
+      [
+        "Configure the front end",
+        "I placed Apache in front of the service as a reverse proxy and configured HTTPS access."
+      ],
+      [
+        "Document administration",
+        "I wrote an administrator guide covering the service and its role-based administration."
+      ]
+    ],
+    "resultLabel": "What I delivered",
+    "result": "The media service was reachable over HTTPS and had a written administration guide for ongoing maintenance.",
+    "takeaway": "Knowing where the proxy ends and the application begins makes their logs easier to interpret."
+  },
+  {
+    "slug": "veeam-backup-lab",
+    "name": "Veeam backup & restore lab",
+    "category": "Infrastructure",
+    "discipline": "Backup operations",
+    "icon": "database",
+    "date": "Aug 2024",
+    "setting": "Academic lab",
+    "role": "Systems administrator",
+    "platforms": [
+      "Windows"
+    ],
+    "level": "Intermediate",
+    "tools": [
+      "Veeam Backup & Replication",
+      "Repositories",
+      "Agents",
+      "Restore testing"
+    ],
+    "summary": "Configured backup repositories and agents, then exercised backup and restore procedures in a lab.",
+    "purpose": "I wanted to verify the recovery path for systems and endpoints, including the repositories and policies behind a backup job.",
+    "steps": [
+      [
+        "Set up repositories",
+        "I configured Veeam Backup & Replication with multiple repositories and retention policies."
+      ],
+      [
+        "Connect endpoints",
+        "I implemented agents to include endpoints in the backup workflow."
+      ],
+      [
+        "Exercise recovery",
+        "I tested backup and restore procedures to check how the configured recovery path behaved."
+      ]
+    ],
+    "resultLabel": "What I verified",
+    "result": "The lab included tested backup and restore procedures. I later applied that experience to a separate backup design for a Proxmox home lab.",
+    "takeaway": "A completed backup job and a successful restore answer different operational questions.",
+    "related": "veeam-backup-design"
+  }
+]

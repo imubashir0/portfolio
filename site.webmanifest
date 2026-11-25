@@ -1,0 +1,18 @@
+{
+  "name": "Mubashir Ishimwe | IT Portfolio",
+  "short_name": "Mubashir Ishimwe",
+  "lang": "en",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "browser",
+  "background_color": "#101719",
+  "theme_color": "#101719",
+  "icons": [
+    {
+      "src": "assets/images/terminal.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
