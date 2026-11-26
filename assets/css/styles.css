@@ -78,7 +78,6 @@ img { display: block; max-width: 100%; }
 .text-link, .plain-button, .inline-case { font-size: .9rem; line-height: 1.45; font-weight: 550; }
 .text-link { color: var(--accent); }
 .text-link:hover, .plain-button:hover, .inline-case:hover { text-decoration: underline; text-underline-offset: .23em; }
-.file-type { padding: .09rem .33rem; border: 1px solid currentColor; border-radius: .18rem; font: 400 .71rem/1.25 var(--mono); letter-spacing: .03em; }
 .plain-button { color: var(--accent); background: transparent; border: 0; padding: .35rem 0; }
 
 /* Site navigation */
@@ -99,10 +98,6 @@ img { display: block; max-width: 100%; }
 .main-nav { margin-left: auto; display: flex; align-items: center; gap: clamp(1rem, 2.3vw, 2.1rem); }
 .main-nav a { padding: .5rem 0; color: #c1cbca; font-size: .91rem; font-weight: 490; }
 .main-nav a:hover, .main-nav a[aria-current] { color: var(--accent); }
-.nav-actions { display: flex; align-items: center; gap: .48rem; }
-.button-header { min-height: 2.45rem; padding: .52rem .93rem; color: var(--text); border-color: #50605e; background: #1a2426; font-size: .865rem; }
-.button-header .icon { width: 1rem; height: 1rem; color: var(--accent); }
-.button-header:hover { background: #26332e; border-color: #8db99c; }
 .menu-button { display: none; }
 
 /* Intro */
@@ -337,11 +332,9 @@ select {
   .wrap { width: calc(100% - 2.5rem); }
   .nav-row { min-height: 3.8rem; display: grid; grid-template-columns: 1fr auto; gap: 0 .5rem; }
   .brand { width: fit-content; }
-  .nav-actions { grid-column: 2; grid-row: 1; }
   .brand-mark { width: 1.9rem; height: 1.9rem; }
   .wordmark { font-size: 1rem; }
-  .button-header { min-height: 2.25rem; padding: .45rem .66rem; }
-  .menu-button { display: grid; place-items: center; min-width: 2.3rem; height: 2.3rem; background: transparent; border: 1px solid var(--line); border-radius: .28rem; }
+  .menu-button { grid-column: 2; grid-row: 1; display: grid; place-items: center; min-width: 2.3rem; height: 2.3rem; background: transparent; border: 1px solid var(--line); border-radius: .28rem; }
   .menu-button .close-icon, .menu-button[aria-expanded="true"] .menu-icon { display: none; }
   .menu-button[aria-expanded="true"] .close-icon { display: block; }
   .main-nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; flex-wrap: wrap; gap: .3rem .7rem; border-top: 1px solid var(--line); margin: .2rem 0 .45rem; padding-top: .4rem; }

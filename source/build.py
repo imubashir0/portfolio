@@ -10,7 +10,6 @@ from icons import icon
 
 SOURCE = Path(__file__).resolve().parent
 ROOT = SOURCE.parent
-RESUME = "assets/files/Mubashir_Ishimwe_IT_Analyst_Nov26.pdf"
 PUBLIC_URL = "https://imubashir0.github.io/portfolio/"
 DESCRIPTION = "Mubashir Ishimwe’s Ottawa IT portfolio. Explore Windows support, networking labs, custom PC builds, and hands-on deployment work."
 HERO_ALT = "An illustrated vintage computer with a green wireframe landscape beside a network switch."
@@ -86,15 +85,14 @@ def archive_row(project):
 def render_page(output, path, body, title, description, base_url, page_class, project=None):
     is_home = path == "index.html"
     root = "" if is_home else "../"
-    resume_url = root + RESUME
     is_archive = path == "projects/index.html"
     header = template("header", home_link="#top" if is_home else root + "index.html",
                       home_anchor="" if is_home else root + "index.html",
                       projects_link="#projects" if is_home else "index.html",
                       project_current="" if is_home else (' aria-current="page"' if is_archive else ' aria-current="location"'),
-                      resume_url=resume_url, terminal_icon=icon("terminal"), file_icon=icon("file"),
+                      terminal_icon=icon("terminal"),
                       menu_icon=icon("menu", "menu-icon"), close_icon=icon("close", "close-icon"))
-    footer = template("footer", resume_url=resume_url, file_icon=icon("file"), email_icon=icon("mail"),
+    footer = template("footer", email_icon=icon("mail"),
                       github_icon=icon("github"), linkedin_icon=icon("linkedin"), pin_icon=icon("pin"))
     canonical = urljoin(base_url, path.removesuffix("index.html"))
     image_name = project.get("cover", "hero") if project else "hero"
@@ -143,8 +141,8 @@ def build(output, base_url):
     featured = [p for p in projects if p.get("cover")]
     home = template("home", project_count=len(projects), featured_cards="".join(featured_card(p) for p in featured),
                     skill_cards="".join(skill_item(*s) for s in SKILLS), folder_icon=icon("folder"), email_icon=icon("mail"),
-                    file_icon=icon("file"), pin_icon=icon("pin"), education_icon=icon("graduation"),
-                    grid_icon=icon("folder-grid"), book_icon=icon("book"), support_icon=icon("support"), resume_url=RESUME)
+                    pin_icon=icon("pin"), education_icon=icon("graduation"),
+                    grid_icon=icon("folder-grid"), book_icon=icon("book"), support_icon=icon("support"))
     render_page(output, "index.html", home, "Mubashir Ishimwe | IT Support & Networking", DESCRIPTION, base_url, "home-page")
     render_page(output, "projects/index.html", archive_body(projects), "Project archive | Mubashir Ishimwe",
                 "Browse and compare Mubashir Ishimwe’s systems, infrastructure, hardware, and networking projects.",
